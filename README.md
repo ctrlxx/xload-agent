@@ -42,7 +42,3 @@ veadk web
 
 - 请确保您的Python版本与项目要求兼容（建议使用项目根目录中的`.python-version`指定的Python版本）
 - 在开发过程中，如有任何问题，请检查依赖是否正确安装
-
-## 许可证
-
-本项目采用MIT许可证 - 详情请参阅 <mcfile name="LICENSE" path="/Users/bytedance/work/xload-agent/LICENSE"></mcfile> 文件

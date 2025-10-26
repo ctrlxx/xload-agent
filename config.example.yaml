@@ -1,0 +1,39 @@
+project:
+  workspace:
+    path: /tmp/xload_workspace
+
+model:
+  agent:
+    provider: openai
+    name: doubao-seed-1-6-250615
+    api_base: https://ark.cn-beijing.volces.com/api/v3/
+    # if you only want to use ark model without volcengine tools, just use api_key
+    # if you have volcengine access_key and secret_key, you can comment `api_key` line
+    api_key: <volcengine_api_key>
+  
+volcengine:
+  # [optional] for Viking DB and `web_search` tool
+  access_key: 
+  secret_key: 
+
+observability:
+  # [optional] for exporting tracing data to Volcengine CozeLoop platform
+  opentelemetry:
+    cozeloop:
+      endpoint: https://api.coze.cn/v1/loop/opentelemetry/v1/traces
+      api_key: 
+      service_name: # Coze loop `space_id`
+
+database:
+  # [optional]
+  tos:
+    endpoint: tos-cn-beijing.volces.com # default Volcengine TOS endpoint
+    region: cn-beijing                  # default Volcengine TOS region
+    bucket:
+    
+logging:
+  # ERROR
+  # WARNING
+  # INFO
+  # DEBUG
+  level: DEBUG

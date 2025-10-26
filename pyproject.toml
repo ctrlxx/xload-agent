@@ -1,0 +1,22 @@
+[project]
+name = "xload-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "陈哲康", email = "chenzhekang@bytedance.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx[socks]>=0.28.1",
+    "jinja2>=3.1.6",
+    "pexpect>=4.9.0",
+    "pydantic>=2.12.3",
+    "rich>=14.2.0",
+    "textual>=6.4.0",
+    "veadk-python>=0.2.12",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

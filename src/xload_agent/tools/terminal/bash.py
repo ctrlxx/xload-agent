@@ -4,6 +4,10 @@ from google.adk.tools.tool_context import ToolContext
 
 from .bash_terminal import BashTerminal
 
+from xload_agent.config import Config
+
+config = Config()
+
 keep_alive_terminal: BashTerminal | None = None
 
 
@@ -38,18 +42,18 @@ def bash_tool(
     global keep_alive_terminal
     
     # 获取项目根目录（如果tool_context可用）
-    project_root = None
+    project_workspace = None
     if tool_context:
         # 从当前文件路径动态计算项目根目录
-        project_root = "/tmp"
+        project_workspace = config.workspace_path
     
     try:
         # 初始化或重置终端
         if keep_alive_terminal is None:
-            keep_alive_terminal = BashTerminal(project_root)
+            keep_alive_terminal = BashTerminal(project_workspace)
         elif reset_cwd:
             keep_alive_terminal.close()
-            keep_alive_terminal = BashTerminal(project_root)
+            keep_alive_terminal = BashTerminal(project_workspace)
         
         # 执行命令
         output = keep_alive_terminal.execute(command)

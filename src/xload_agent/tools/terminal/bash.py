@@ -40,7 +40,8 @@ def bash_tool(
     # 获取项目根目录（如果tool_context可用）
     project_root = None
     if tool_context:
-        project_root = "/Users/bytedance/work/xload-agent/workspace"
+        # 从当前文件路径动态计算项目根目录
+        project_root = "/tmp"
     
     try:
         # 初始化或重置终端

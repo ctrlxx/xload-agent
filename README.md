@@ -24,6 +24,14 @@ pip install uv
 uv sync --all-extras
 ```
 
+### 3. 配置config.yaml
+
+复制项目根目录下的`config.yaml.example`文件为`config.yaml`，并根据实际情况修改配置参数。
+
+```bash
+cp config.example.yaml config.yaml
+```
+
 ## 调试与开发启动说明
 
 安装完成后，可以通过以下命令启动开发环境进行调试和开发：
